@@ -1,0 +1,4 @@
+interface:
+  display_name: "Search Term Mining"
+  short_description: "Mine search terms for growth and waste reduction"
+  default_prompt: "Use $search-term-mining to turn this search-term report into actions."

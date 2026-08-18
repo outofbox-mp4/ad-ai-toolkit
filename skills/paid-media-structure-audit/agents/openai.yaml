@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paid Media Structure Audit"
+  short_description: "Audit account structure, targeting, and measurement"
+  default_prompt: "Use $paid-media-structure-audit to audit this advertising account structure."

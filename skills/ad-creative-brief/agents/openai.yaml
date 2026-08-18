@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ad Creative Brief"
+  short_description: "Create evidence-led briefs for paid ad creative"
+  default_prompt: "Use $ad-creative-brief to create a paid social creative brief."

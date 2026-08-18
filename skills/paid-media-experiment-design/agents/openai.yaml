@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paid Media Experiment Design"
+  short_description: "Design measurable paid-media tests with guardrails"
+  default_prompt: "Use $paid-media-experiment-design to design a paid-media test."

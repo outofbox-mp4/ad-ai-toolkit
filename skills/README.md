@@ -12,7 +12,7 @@
 
 | Skill | 用途 |
 | --- | --- |
-| [`google-ads-weekly-review`](./google-ads-weekly-review) | 生成 Google Ads 周度复盘与行动项 |
+| [`paid-media-weekly-review`](./paid-media-weekly-review) | 生成跨平台付费媒体周度复盘与行动项 |
 | [`paid-media-structure-audit`](./paid-media-structure-audit) | 审核账户结构、定向、预算和衡量体系 |
 | [`search-term-mining`](./search-term-mining) | 从搜索词报告发现增量与浪费 |
 | [`search-ad-assets`](./search-ad-assets) | 围绕关键词、触发点和 CTA 生成 Search 文本资产 |

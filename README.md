@@ -14,7 +14,7 @@
 
 | Skill | 用途 |
 | --- | --- |
-| [`google-ads-weekly-review`](./skills/google-ads-weekly-review) | 把账户数据转成周度洞察与行动项 |
+| [`paid-media-weekly-review`](./skills/paid-media-weekly-review) | 把跨平台付费媒体账户数据转成周度洞察与行动项 |
 | [`paid-media-structure-audit`](./skills/paid-media-structure-audit) | 审核账户结构、定向、预算和衡量体系 |
 | [`search-term-mining`](./skills/search-term-mining) | 从搜索词报告发现增量与浪费 |
 | [`ad-creative-brief`](./skills/ad-creative-brief) | 形成可测试、可制作的广告创意 Brief |

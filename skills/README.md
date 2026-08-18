@@ -5,7 +5,7 @@
 ## 当前分类
 
 - **账户与效果分析**：周报、异常诊断、账户结构审计
-- **搜索广告优化**：搜索词挖掘、关键词与否定词建议
+- **搜索广告优化**：搜索词挖掘、关键词与否定词建议、Search 文本资产
 - **创意与策略**：创意 Brief、投放实验与决策框架
 
 ## 已收录
@@ -15,6 +15,7 @@
 | [`google-ads-weekly-review`](./google-ads-weekly-review) | 生成 Google Ads 周度复盘与行动项 |
 | [`paid-media-structure-audit`](./paid-media-structure-audit) | 审核账户结构、定向、预算和衡量体系 |
 | [`search-term-mining`](./search-term-mining) | 从搜索词报告发现增量与浪费 |
+| [`search-ad-assets`](./search-ad-assets) | 围绕关键词、触发点和 CTA 生成 Search 文本资产 |
 | [`ad-creative-brief`](./ad-creative-brief) | 创建可测试、可制作的广告创意 Brief |
 | [`paid-media-experiment-design`](./paid-media-experiment-design) | 设计有明确判定规则的投放实验 |
 

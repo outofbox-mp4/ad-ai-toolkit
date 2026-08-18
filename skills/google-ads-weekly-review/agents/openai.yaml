@@ -1,4 +1,0 @@
-interface:
-  display_name: "Google Ads Weekly Review"
-  short_description: "Turn account data into weekly reviews"
-  default_prompt: "Use $google-ads-weekly-review to analyze Google Ads weekly performance."

@@ -1,9 +1,15 @@
 ---
 name: ad-creative-brief
-description: Create evidence-led creative briefs for paid social, display, video, or search ads from a product proposition, audience, campaign goal, and performance insights. Use when asked to develop ad concepts, creative testing briefs, copy angles, scripts, or production requirements for an advertising campaign.
+description: Create evidence-led briefs for visual advertising assets—paid social, display, video, carousel, and Performance Max asset groups—from a product proposition, audience, campaign goal, and performance insights. Use when asked for visual ad concepts, storyboards, video scripts, image or carousel directions, asset production requirements, or creative tests. Do not use for standalone text Search ads, keyword strategy, or responsive search ad copy.
 ---
 
-# Ad Creative Brief
+# Visual Ad Creative Brief
+
+## Scope
+
+Use for ads where the creative idea must be expressed through an image, video, carousel, display unit, or a Performance Max asset group. Typical channels include Meta, TikTok, LinkedIn, YouTube, display networks, and Performance Max.
+
+Do not use for pure Search campaigns that need keyword-to-intent mapping, responsive search-ad headlines or descriptions, ad extensions, or search-query optimization. Handle those with a dedicated Search-ad copy or Search-campaign skill. When a brief covers both visual and Search inventory, produce only the visual-asset portion here and keep Search requirements separate.
 
 ## Frame the problem
 

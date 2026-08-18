@@ -23,6 +23,8 @@ Obtain product truth, offer, desired action, target audience, funnel stage, mark
 4. For each angle, specify hook, proof, storyboard or visual direction, primary text, headline, CTA, placement adaptations, and disallowed claims.
 5. Define the test variable, success metric, learning window, and next decision.
 
+Read [examples/example.md](examples/example.md) when a concrete output shape is helpful.
+
 ## Guardrails
 
 - Do not invent product facts, discounts, testimonials, results, or legal claims.

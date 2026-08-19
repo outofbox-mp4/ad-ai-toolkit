@@ -7,7 +7,6 @@
 | 分类 | 适用场景 |
 | --- | --- |
 | [Skills](./skills) | 让 Agent 按明确边界完成广告分析与规划 |
-| [Templates](./templates) | 直接复用的投放周报、实验与创意 Brief |
 | [Tools](./tools) | 按广告工作流收录 AI 工具与集成方案 |
 
 ## 已包含的 Skills

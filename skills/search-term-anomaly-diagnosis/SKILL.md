@@ -44,6 +44,28 @@ Return:
 4. Exact, phrase, or broad negative-keyword candidates only where relevance is clearly absent; include false-positive risk.
 5. Tracking, landing-page, campaign-structure, or auction checks needed to confirm the hypothesis.
 
+## Prompt examples
+
+The examples below use placeholders only. Replace them with the minimum necessary, authorized account context; do not include credentials, customer personal data, or unredacted exports.
+
+### Analyze a connected account
+
+```text
+Use $search-term-anomaly-diagnosis to investigate a CPA anomaly for account <account-id>.
+Compare <current-period> with <baseline-period>. Target CPA is <target-cpa>;
+the conversion is <conversion-definition>. Identify high-spend zero-conversion
+queries, anomalous CPC or CPA terms, and new query themes. Do not modify the account.
+```
+
+### Analyze an uploaded report
+
+```text
+Use $search-term-anomaly-diagnosis on this anonymized search-term report.
+Current-period CPA changed from <baseline-cpa> to <current-cpa>; conversion means
+<conversion-definition>. Classify anomaly-driving terms, state the evidence and
+root-cause hypothesis, and propose review-only negative-keyword candidates.
+```
+
 ## Guardrails
 
 - Never add negatives automatically; show exact proposed terms and match levels for approval.

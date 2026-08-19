@@ -15,7 +15,7 @@
 | --- | --- |
 | [`ad-weekly-review`](./skills/ad-weekly-review) | 把跨平台广告账户数据转成周度洞察与行动项 |
 | [`ad-structure-audit`](./skills/ad-structure-audit) | 审核账户结构、定向、预算和衡量体系 |
-| [`search-term-mining`](./skills/search-term-mining) | 从搜索词报告发现增量与浪费 |
+| [`search-term-anomaly-diagnosis`](./skills/search-term-anomaly-diagnosis) | 从搜索词中诊断花费、CPC、CPA 或转化异常 |
 | [`ad-creative-brief`](./skills/ad-creative-brief) | 形成可测试、可制作的广告创意 Brief |
 | [`ad-experiment-design`](./skills/ad-experiment-design) | 设计有判定规则的广告实验 |
 

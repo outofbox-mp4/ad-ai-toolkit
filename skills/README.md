@@ -14,7 +14,7 @@
 | --- | --- |
 | [`ad-weekly-review`](./ad-weekly-review) | 生成跨平台广告周度复盘与行动项 |
 | [`ad-structure-audit`](./ad-structure-audit) | 审核账户结构、定向、预算和衡量体系 |
-| [`search-term-mining`](./search-term-mining) | 从搜索词报告发现增量与浪费 |
+| [`search-term-anomaly-diagnosis`](./search-term-anomaly-diagnosis) | 从搜索词中诊断花费、CPC、CPA 或转化异常 |
 | [`search-ad-assets`](./search-ad-assets) | 围绕关键词、触发点和 CTA 生成 Search 文本资产 |
 | [`ad-creative-brief`](./ad-creative-brief) | 创建可测试、可制作的广告创意 Brief |
 | [`ad-experiment-design`](./ad-experiment-design) | 设计有明确判定规则的广告实验 |

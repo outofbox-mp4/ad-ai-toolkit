@@ -24,7 +24,9 @@
 ```text
 skills/
 └── <skill-name>/
-    └── SKILL.md
+    ├── SKILL.md
+    └── examples/
+        └── example.md
 ```
 
 `<skill-name>` 使用小写连字符命名，例如 `meta-ads-weekly-review`。`SKILL.md` 至少包含：
@@ -47,3 +49,5 @@ description: 清晰描述该 skill 的功能，以及它应在什么任务中被
 ```
 
 请保持单一职责；不要内置凭据、客户数据或未经验证的平台规则。提交前按仓库根目录的 [贡献指南](../CONTRIBUTING.md) 自检。
+
+如示例能帮助理解输入或预期输出，请将它放在该 skill 自己的 `examples/example.md` 中，并仅使用虚构或已脱敏的数据。

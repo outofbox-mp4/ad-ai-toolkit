@@ -1,9 +1,9 @@
 ---
-name: paid-media-experiment-design
-description: Design measurable advertising experiments for bidding, audience, creative, landing-page, budget, or campaign-structure decisions. Use when asked to create an A/B test, incrementality plan, paid-media experiment backlog, or decision framework for campaign optimization.
+name: ad-experiment-design
+description: Design measurable advertising experiments for bidding, audience, creative, landing-page, budget, or campaign-structure decisions. Use when asked to create an A/B test, incrementality plan, ad experiment backlog, or decision framework for campaign optimization.
 ---
 
-# Paid Media Experiment Design
+# Ad Experiment Design
 
 ## Define a decision
 

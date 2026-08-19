@@ -1,9 +1,9 @@
 ---
-name: paid-media-weekly-review
-description: Analyze weekly performance for Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads, display platforms, or a cross-channel paid-media program. Turn available campaign, ad set or group, audience, creative, keyword or search-term, budget, and conversion data into a concise decision-ready review. Use for a paid-media weekly report, performance diagnosis, anomaly analysis, or prioritized optimization recommendations.
+name: ad-weekly-review
+description: Analyze weekly performance for Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads, display platforms, or a cross-channel ad program. Turn available campaign, ad set or group, audience, creative, keyword or search-term, budget, and conversion data into a concise decision-ready review. Use for an ad weekly report, performance diagnosis, anomaly analysis, or prioritized optimization recommendations.
 ---
 
-# Paid Media Weekly Review
+# Ad Weekly Review
 
 ## Gather and validate
 

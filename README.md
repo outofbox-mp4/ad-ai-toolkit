@@ -14,11 +14,11 @@
 
 | Skill | 用途 |
 | --- | --- |
-| [`paid-media-weekly-review`](./skills/paid-media-weekly-review) | 把跨平台付费媒体账户数据转成周度洞察与行动项 |
-| [`paid-media-structure-audit`](./skills/paid-media-structure-audit) | 审核账户结构、定向、预算和衡量体系 |
+| [`ad-weekly-review`](./skills/ad-weekly-review) | 把跨平台广告账户数据转成周度洞察与行动项 |
+| [`ad-structure-audit`](./skills/ad-structure-audit) | 审核账户结构、定向、预算和衡量体系 |
 | [`search-term-mining`](./skills/search-term-mining) | 从搜索词报告发现增量与浪费 |
 | [`ad-creative-brief`](./skills/ad-creative-brief) | 形成可测试、可制作的广告创意 Brief |
-| [`paid-media-experiment-design`](./skills/paid-media-experiment-design) | 设计有判定规则的广告实验 |
+| [`ad-experiment-design`](./skills/ad-experiment-design) | 设计有判定规则的广告实验 |
 
 每个 Skill 均以 `SKILL.md` 发布，遵循 [Agent Skills](https://agentskills.io) 的目录规范。可将 `skills/<skill-name>` 安装或复制到所用 Agent 支持的 skills 目录。
 

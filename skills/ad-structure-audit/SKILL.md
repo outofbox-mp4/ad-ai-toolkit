@@ -1,9 +1,9 @@
 ---
-name: paid-media-structure-audit
-description: Audit Google, Meta, TikTok, LinkedIn, or other paid-media account structures for strategy alignment, targeting overlap, budget control, measurement, naming, and operational risks. Use when asked to review or redesign an advertising account, campaign taxonomy, or measurement setup.
+name: ad-structure-audit
+description: Audit Google, Meta, TikTok, LinkedIn, or other ad account structures for strategy alignment, targeting overlap, budget control, measurement, naming, and operational risks. Use when asked to review or redesign an advertising account, campaign taxonomy, or measurement setup.
 ---
 
-# Paid Media Structure Audit
+# Ad Structure Audit
 
 ## Inputs
 

@@ -1,4 +1,4 @@
-# Paid Media Experiment Card
+# Ad Experiment Card
 
 - Decision to make:
 - Hypothesis:

@@ -13,7 +13,7 @@
 | 模板 | 用途 |
 | --- | --- |
 | [`campaign-weekly-review.md`](./campaign-weekly-review.md) | 广告周报与优化行动跟踪 |
-| [`paid-media-experiment.md`](./paid-media-experiment.md) | 投放实验卡与结果判定 |
+| [`ad-experiment.md`](./ad-experiment.md) | 广告实验卡与结果判定 |
 | [`ad-creative-brief.md`](./ad-creative-brief.md) | 广告创意制作与测试 Brief |
 
 ## 新增模板规范

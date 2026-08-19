@@ -12,12 +12,12 @@
 
 | Skill | 用途 |
 | --- | --- |
-| [`paid-media-weekly-review`](./paid-media-weekly-review) | 生成跨平台付费媒体周度复盘与行动项 |
-| [`paid-media-structure-audit`](./paid-media-structure-audit) | 审核账户结构、定向、预算和衡量体系 |
+| [`ad-weekly-review`](./ad-weekly-review) | 生成跨平台广告周度复盘与行动项 |
+| [`ad-structure-audit`](./ad-structure-audit) | 审核账户结构、定向、预算和衡量体系 |
 | [`search-term-mining`](./search-term-mining) | 从搜索词报告发现增量与浪费 |
 | [`search-ad-assets`](./search-ad-assets) | 围绕关键词、触发点和 CTA 生成 Search 文本资产 |
 | [`ad-creative-brief`](./ad-creative-brief) | 创建可测试、可制作的广告创意 Brief |
-| [`paid-media-experiment-design`](./paid-media-experiment-design) | 设计有明确判定规则的投放实验 |
+| [`ad-experiment-design`](./ad-experiment-design) | 设计有明确判定规则的广告实验 |
 
 ## 新增 Skill 模板
 

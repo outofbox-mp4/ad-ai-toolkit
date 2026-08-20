@@ -1,28 +1,83 @@
 # Ad Optimization Method Library
 
-这里是一个广告优化师的方法论资产库，重点服务于 Google Ads / SaaS / B2B / 跨境投放场景，并可拓展到搜索类平台广告及其它社媒广告。
+![Google Ads](https://img.shields.io/badge/Focus-Google%20Ads-4285F4?style=flat-square&logo=googleads&logoColor=white)
+![SaaS B2B](https://img.shields.io/badge/Industry-SaaS%20%2F%20B2B-orange?style=flat-square)
+![Agent Ready](https://img.shields.io/badge/AI-Agent%20Ready-16a34a?style=flat-square)
+![Method Library](https://img.shields.io/badge/Asset-Method%20Library-111827?style=flat-square)
 
-<img width="400" height="350" alt="企鹅家族00006-潇洒小滑板" src="https://github.com/user-attachments/assets/a2db1d4a-b4f7-4ff4-88bd-f044550b69ef" />
+<p align="center">
+  <img width="400" height="350" alt="企鹅家族00006-潇洒小滑板" src="https://github.com/user-attachments/assets/a2db1d4a-b4f7-4ff4-88bd-f044550b69ef" />
+</p>
 
-## 资产库原则
+> 这是一个广告优化师把实战判断逻辑沉淀给 AI Agent 的方法论资产库。
+>
+> 不做 prompt 堆叠，只做逻辑打磨。让 Agent 每次分析广告账户时，不是自由发挥，而是按同一套可复盘、可交付、可行动的优化框架工作。
 
-简单问题可以直接问 Agent。本库不做 prompt 堆积，而是呈现可复用的判断逻辑、诊断 SOP、指标口径、决策阈值、报告模板、实验模板和 Agent skill 编写规范，让 Agent 每次都按同一套优化逻辑分析、产出和行动。
+## Who Built This
 
-所有案例均使用虚拟产品FlowNote（一款会议记录软件）做演示。
+我是一个长期做 Google Ads / SaaS / B2B / 跨境投放的广告优化师，也在把广告优化工作流逐步 Agent 化。
 
-默认 ROI 是主目标，注册和试用是过程指标。过程指标会随业务变化：SaaS 常看注册、试用、付费；跨境电商可替换为关注、加购、下单、客单价和 ROI。
+在 AI 时代，与其不断喂 Agent 碎片化 prompt，不如把经过实战验证的 SOP、指标口径、诊断逻辑和决策阈值沉淀下来。这个仓库就是我把广告投放经验“代码化”的地方：让 Agent 像一个稳定的协作优化师，而不是每次重新猜我的判断标准。
 
-任何广告问题都必须拆完整漏斗：
+所有案例均使用虚拟产品 FlowNote 做演示：一款把会议记录转成任务和截止日期的会议记录软件。
+
+## Why This Exists
+
+广告优化里真正稀缺的不是“能说出建议”，而是稳定地判断：
+
+- 问题到底发生在漏斗哪一段？
+- 这是广告侧可控问题，还是业务供给问题？
+- 该继续投、缩量、暂停、做实验，还是交给业务决策？
+- 哪些证据不能跳过，哪些结论不能乱下？
+
+这个仓库把这些判断沉淀成可复用资产：诊断 SOP、指标拆解、数据口径、决策阈值、报告模板、实验模板和 Agent skills。
+
+## Core Philosophy
 
 ```text
-广告花费 -> 展示 -> 点击 -> 注册 -> 试用 -> 付费 -> 付费金额 -> ROI
+广告花费
+  -> 展示
+    -> 点击
+      -> 注册
+        -> 试用
+          -> 付费
+            -> 付费金额
+              -> ROI
 ```
 
-每次分析必须判断问题发生在哪一段：CPC、点击到注册率、注册 CPA、注册到试用率、试用 CPA、试用到付费率、付费 CPA、客单价、ROI。
+默认 ROI 是最终目标，注册和试用是过程指标。过程指标会随业务变化：SaaS 常看注册、试用、付费；跨境电商可替换为关注、加购、下单、客单价和 ROI。
 
-## 目录
+每次分析必须判断问题发生在哪一段：
 
-| 目录 | 用途 |
+| Funnel Question | What It Tells You |
+| --- | --- |
+| CPC 是否上升 | 流量成本或竞争是否变强 |
+| 点击到注册率是否下降 | 搜索意图、受众、页面或 offer 是否错配 |
+| 注册 CPA 是否异常 | 前漏斗获客成本是否失控 |
+| 注册到试用率是否下降 | 注册质量或产品激活路径是否变弱 |
+| 试用 CPA 是否异常 | 中漏斗是否还能支撑增长 |
+| 试用到付费率是否下降 | 付费能力、产品价值或运营承接是否变弱 |
+| 付费 CPA 是否异常 | 最终获客成本是否可接受 |
+| 客单价是否下降 | 收入质量是否变差 |
+| ROI 是否恶化 | 最终投放是否还值得继续 |
+
+## Quick Start
+
+如果你是 AI Agent：先读取 [AGENTS.md](./AGENTS.md)，获取全局分析逻辑和输出边界。
+
+如果你遇到 ROI 下滑：从 [roi-diagnosis](./skills/roi-diagnosis) 和 [roi-drop-checklist.md](./sops/roi-drop-checklist.md) 开始。
+
+如果你遇到注册、试用、ROI 多目标同时压制：看 [multi-goal-pressure-example.md](./examples/multi-goal-pressure-example.md)，重点判断账户是否进入保守收缩状态。
+
+如果你怀疑搜索词浪费：使用 [search-term-anomaly-diagnosis](./skills/search-term-anomaly-diagnosis) 和 [search-term-waste-checklist.md](./sops/search-term-waste-checklist.md)。
+
+如果你要给团队交付报告：使用 [diagnosis-report-template.md](./templates/diagnosis-report-template.md) 或 [weekly-report-template.md](./templates/weekly-report-template.md)。
+
+如果你要安装 Agent skill：进入 [skills](./skills)，选择对应工作流。
+
+## Asset Map
+
+| Directory | What It Captures |
 | --- | --- |
 | [methodology](./methodology) | 共用方法论：ROI 诊断、账户诊断、市场洞察、搜索词分析、实验设计 |
 | [sops](./sops) | 可执行检查清单：ROI 下滑、CPA 异常、试用下降、付费削弱、搜索词浪费 |
@@ -32,9 +87,9 @@
 | [examples](./examples) | 脱敏案例，展示方法论如何落到真实广告优化工作 |
 | [tools](./tools) | 广告自动化工具和 MCP 接入模板 |
 
-## 当前核心资产
+## Featured Assets
 
-| 资产 | 用途 |
+| Asset | When To Use |
 | --- | --- |
 | [roi-diagnosis](./skills/roi-diagnosis) | 诊断 ROI、注册、试用多目标同时压制和付费能力削弱 |
 | [google-ads-campaign-audit](./skills/google-ads-campaign-audit) | 只读审计 Google Ads 系列表现 |
@@ -45,15 +100,34 @@
 | [search-ad-assets](./skills/search-ad-assets) | Search 标题、描述等文字资产 |
 | [ad-creative-brief](./skills/ad-creative-brief) | 视觉广告创意 brief |
 
-## 使用方式
+## What Makes This Different
 
-1. 先读 [AGENTS.md](./AGENTS.md)，确认 Agent 的默认判断逻辑。
-2. 分析类任务优先从 [methodology/roi-diagnosis.md](./methodology/roi-diagnosis.md) 和 [data-schemas/funnel-metrics.md](./data-schemas/funnel-metrics.md) 统一口径。
-3. 高频工作用 [skills](./skills) 中的可安装 skill 执行。
-4. 团队交付用 [templates](./templates) 输出，关键结论进入决策记录。
-5. 任何真实账户导出、客户数据、凭据和受众数据都不进入仓库。
+普通 prompt 会问：“帮我分析广告账户。”
 
-## 安全边界
+这个资产库会要求 Agent：
+
+1. 先统一数据口径和转化定义。
+2. 再拆完整漏斗，而不是只盯 campaign CPA。
+3. 明确断点发生在流量成本、注册质量、试用激活、付费能力、客单价还是 ROI。
+4. 区分广告侧可控问题和业务侧不可控问题。
+5. 给出证据、阈值、风险、owner、下一步实验和停止规则。
+
+## Roadmap
+
+- Google Ads ROI pressure playbook：多目标压制、tROAS/tCPA 收缩、学习样本不足的诊断框架
+- PMax asset and final URL audit：PMax 素材、页面、受众信号和低意图流量排查
+- B2B SaaS landing-page diagnosis：从点击到注册、注册到试用的页面诊断 SOP
+- Cross-border ecommerce funnel schema：关注、加购、下单、客单价和 ROI 的电商口径
+- Meta / TikTok / LinkedIn diagnostics：社媒广告的素材疲劳、受众质量和 funnel 判断
+- Agent skill evaluation cases：用脱敏案例测试 skill 是否稳定遵循方法论
+
+## Contribution
+
+欢迎用 Issue 交流广告投放里的真实难题、奇怪波动和踩坑案例。这个仓库的目标不是收集漂亮话，而是把经验沉淀成 Agent 能执行的判断代码。
+
+提交前请阅读 [CONTRIBUTING.md](./CONTRIBUTING.md)。新增内容应服务真实优化工作，并尽量回答：它能让 Agent 下次少犯什么判断错误？
+
+## Safety
 
 - Skills 默认只分析、建议和生成草稿。
 - 预算、出价、定向、否定词、素材发布、投放状态等写操作必须获得明确确认。

@@ -9,6 +9,10 @@
 - 投放运营：命名检查、批量操作、预算监控与报告自动化
 - 研究：竞品、关键词、受众语言与落地页研究
 
+## 已收录
+
+- [`ad-mcp-tool`](./ad-mcp-tool)：Google Ads API 接入 Codex / Agent 的 MCP 实践、脱敏配置模板与 Windows DPAPI 本机凭据包装器。
+
 ## 新工具条目模板
 
 ```md

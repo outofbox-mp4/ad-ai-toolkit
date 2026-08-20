@@ -13,6 +13,7 @@
 | Skill | 用途 |
 | --- | --- |
 | [`ad-weekly-review`](./ad-weekly-review) | 广告周度复盘 |
+| [`google-ads-campaign-audit`](./google-ads-campaign-audit) | 只读审计 Google Ads 系列表现，并要求凭据隔离和报表脱敏 |
 | [`ad-structure-audit`](./ad-structure-audit) | 审核账户结构 |
 | [`search-term-anomaly-diagnosis`](./search-term-anomaly-diagnosis) | 通过搜索词诊断花费、CPC、CPA 或转化异常 |
 | [`search-ad-assets`](./search-ad-assets) | 生成标题、描述等文字资产 |

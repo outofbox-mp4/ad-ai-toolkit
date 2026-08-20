@@ -14,10 +14,18 @@
 | Skill | 用途 |
 | --- | --- |
 | [`ad-weekly-review`](./skills/ad-weekly-review) | 把跨平台广告账户数据转成周度洞察与行动项 |
+| [`google-ads-campaign-audit`](./skills/google-ads-campaign-audit) | 只读审计 Google Ads 系列表现，并对敏感数据做脱敏/加密边界处理 |
 | [`ad-structure-audit`](./skills/ad-structure-audit) | 审核账户结构、定向、预算和衡量体系 |
 | [`search-term-anomaly-diagnosis`](./skills/search-term-anomaly-diagnosis) | 从搜索词中诊断花费、CPC、CPA 或转化异常 |
+| [`search-ad-assets`](./skills/search-ad-assets) | 围绕关键词、触发点和 CTA 生成 Search 文本资产 |
 | [`ad-creative-brief`](./skills/ad-creative-brief) | 形成可测试、可制作的广告创意 Brief |
 | [`ad-experiment-design`](./skills/ad-experiment-design) | 设计有判定规则的广告实验 |
+
+## 已收录的 Tools
+
+| Tool | 用途 |
+| --- | --- |
+| [`ad-mcp-tool`](./tools/ad-mcp-tool) | 以凭据隔离、只读优先和人工审批将 Google Ads API 经 MCP 安全接入 Codex / Agent |
 
 每个 Skill 均以 `SKILL.md` 发布，遵循 [Agent Skills](https://agentskills.io) 的目录规范。可将 `skills/<skill-name>` 安装或复制到所用 Agent 支持的 skills 目录。
 

@@ -4,3 +4,9 @@
 *.csv
 *.xlsx
 *.log
+
+# Local Google Ads MCP credentials and account mappings. The examples under
+# tools/ad-mcp-tool/config are intentionally safe to commit.
+tools/ad-mcp-tool/secrets/
+tools/ad-mcp-tool/config/*.local.json
+tools/ad-mcp-tool/config/*.private.json

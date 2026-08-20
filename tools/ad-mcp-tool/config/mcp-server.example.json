@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "google_ads": {
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-File",
+        "C:\\absolute\\path\\to\\ad-mcp-tool\\scripts\\Start-GoogleAdsMcp.ps1",
+        "-ServerCommand",
+        "C:\\absolute\\path\\to\\your-google-ads-mcp-server.exe"
+      ]
+    }
+  }
+}

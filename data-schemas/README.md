@@ -6,8 +6,8 @@
 
 | File | Purpose |
 | --- | --- |
-| [funnel-metrics.md](./funnel-metrics.md) | 定义广告漏斗指标、公式和数据质量规则 |
-| [google-ads-fields.md](./google-ads-fields.md) | 说明 Google Ads 常用字段、成本转换和脱敏处理 |
+| [funnel-metrics.md](./funnel-metrics.md) | 定义广告漏斗指标、计算公式和业务指标数据 |
+| [google-ads-fields.md](./google-ads-fields.md) | 说明 Google Ads 常用字段 |
 | [market-segmentation.md](./market-segmentation.md) | 定义市场、意图、人群、offer 等分层维度 |
 
 ## 使用方式

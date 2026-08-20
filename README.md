@@ -2,7 +2,7 @@
 
 这里是一个广告优化师的方法论资产库，重点服务于 Google Ads / SaaS / B2B / 跨境投放场景，并可拓展到搜索类平台广告及其它社媒广告。
 
-<img width="240" height="224" alt="企鹅家族00006-潇洒小滑板" src="https://github.com/user-attachments/assets/a2db1d4a-b4f7-4ff4-88bd-f044550b69ef" />
+<img width="400" height="350" alt="企鹅家族00006-潇洒小滑板" src="https://github.com/user-attachments/assets/a2db1d4a-b4f7-4ff4-88bd-f044550b69ef" />
 
 ## 资产库原则
 

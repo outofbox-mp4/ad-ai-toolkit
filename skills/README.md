@@ -20,13 +20,13 @@
 
 | Skill | 用途 |
 | --- | --- |
-| [`roi-diagnosis`](./roi-diagnosis) | 诊断 ROI、注册、试用多目标压制和付费能力削弱 |
-| [`google-ads-campaign-audit`](./google-ads-campaign-audit) | 只读审计 Google Ads 系列表现 |
-| [`search-term-anomaly-diagnosis`](./search-term-anomaly-diagnosis) | 通过搜索词诊断花费、CPC、CPA 或转化异常 |
+| [`roi-diagnosis`](./roi-diagnosis) | 诊断 ROI 波动 |
+| [`google-ads-campaign-audit`](./google-ads-campaign-audit) | 审核 Google Ads 系列表现 |
+| [`search-term-anomaly-diagnosis`](./search-term-anomaly-diagnosis) | 搜索字词异常排查、否词建议 |
 | [`ad-weekly-review`](./ad-weekly-review) | 广告周度复盘 |
 | [`ad-structure-audit`](./ad-structure-audit) | 审核账户结构 |
 | [`ad-experiment-design`](./ad-experiment-design) | 设计广告实验 |
-| [`search-ad-assets`](./search-ad-assets) | 生成 Search 标题、描述等文字资产 |
+| [`search-ad-assets`](./search-ad-assets) | 生成 Search 广告标题、描述等文字资产 |
 | [`ad-creative-brief`](./ad-creative-brief) | 创建视觉广告创意 Brief |
 
 ## 新增 Skill 模板

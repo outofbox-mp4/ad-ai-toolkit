@@ -2,7 +2,7 @@
 
 ## Required Dimensions
 
-| Dimension | SaaS / B2B Examples | Why It Matters |
+| Dimension | SaaS Examples | Why It Matters |
 | --- | --- | --- |
 | Country / Region | US, UK, CA, AU, EU, emerging markets | ROI 和付费能力常按市场分化 |
 | Language | English, Spanish, German | 文案和落地页匹配 |

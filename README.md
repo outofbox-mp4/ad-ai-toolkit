@@ -59,20 +59,6 @@
 | 客单价是否下降 | 收入质量是否变差 |
 | ROI 是否恶化 | 投放是否还值得继续 |
 
-## Quick Start
-
-如果你是 AI Agent：先读取 [AGENTS.md](./AGENTS.md)，获取全局分析逻辑和输出边界。
-
-如果你遇到 ROI 下滑：从 [roi-diagnosis](./skills/roi-diagnosis) 和 [roi-drop-checklist.md](./sops/roi-drop-checklist.md) 开始。
-
-如果你遇到注册、试用、ROI 多目标同时压制：看 [multi-goal-pressure-example.md](./examples/multi-goal-pressure-example.md)，重点判断账户是否进入保守收缩状态。
-
-如果你怀疑搜索词浪费：使用 [search-term-anomaly-diagnosis](./skills/search-term-anomaly-diagnosis) 和 [search-term-waste-checklist.md](./sops/search-term-waste-checklist.md)。
-
-如果你要给团队交付报告：使用 [diagnosis-report-template.md](./templates/diagnosis-report-template.md) 或 [weekly-report-template.md](./templates/weekly-report-template.md)。
-
-如果你要安装 Agent skill：进入 [skills](./skills)，选择对应工作流。
-
 ## Asset Map
 
 | Directory | What It Captures |

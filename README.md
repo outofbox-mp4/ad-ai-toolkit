@@ -63,22 +63,21 @@
 
 | Directory | What It Captures |
 | --- | --- |
-| [methodology](./methodology) | 共用方法论：ROI 诊断、账户诊断、市场洞察、搜索词分析、实验设计 |
-| [sops](./sops) | 可执行检查清单：ROI 下滑、CPA 异常、试用下降、付费削弱、搜索词浪费 |
-| [skills](./skills) | 可安装的 Agent skills，让 Agent 按固定流程完成高频工作 |
-| [templates](./templates) | 团队交付模板：周报、诊断报告、实验 brief、决策记录 |
-| [data-schemas](./data-schemas) | 数据字段和指标口径，避免不同分析口径混用 |
-| [examples](./examples) | 脱敏案例，展示方法论如何落到真实广告优化工作 |
-| [tools](./tools) | 广告自动化工具和 MCP 接入模板 |
+| [methodology](./methodology) | 通用方法论：ROI 诊断、账户诊断、市场洞察、搜索词分析、实验设计 |
+| [sops](./sops) | 常见投放问题检查清单：ROI 下滑、CPA 异常、转化下降、付费减少、否定词列表 |
+| [skills](./skills) | 可安装的 Agent skills，让 Agent 按固定流程完成重复性优化工作 |
+| [templates](./templates) | 报告交付模板：周报、诊断报告、实验 brief、决策记录 |
+| [data-schemas](./data-schemas) | 数据字段和指标口径 |
+| [tools](./tools) | 可接入Agent的广告自动化工具 |
 
 ## Featured Assets
 
 | Asset | When To Use |
 | --- | --- |
-| [roi-diagnosis](./skills/roi-diagnosis) | 诊断 ROI、注册、试用多目标同时压制和付费能力削弱 |
-| [google-ads-campaign-audit](./skills/google-ads-campaign-audit) | 只读审计 Google Ads 系列表现 |
+| [roi-diagnosis](./skills/roi-diagnosis) | 诊断 ROI 主目标下账户表现 |
+| [google-ads-campaign-audit](./skills/google-ads-campaign-audit) | 检查 Google Ads 系列表现 |
 | [search-term-anomaly-diagnosis](./skills/search-term-anomaly-diagnosis) | 搜索词花费、CPC、CPA 或转化异常排查 |
-| [ad-weekly-review](./skills/ad-weekly-review) | 广告周度复盘 |
+| [ad-weekly-review](./skills/ad-weekly-review) | 广告周复盘 |
 | [ad-structure-audit](./skills/ad-structure-audit) | 账户结构审计 |
 | [ad-experiment-design](./skills/ad-experiment-design) | 广告实验设计 |
 | [search-ad-assets](./skills/search-ad-assets) | Search 标题、描述等文字资产 |
@@ -86,12 +85,12 @@
 
 ## What Makes This Different
 
-普通 prompt 会问：“帮我分析广告账户。”
+之前，你可能会选择一个AI，发账户截图或者导出文件，然后说：“帮我分析广告账户。”
 
 这个资产库会要求 Agent：
 
 1. 先统一数据口径和转化定义。
-2. 再拆完整漏斗，而不是只盯 campaign CPA。
+2. 再拆完整漏斗，而不是只盯浅层CPA。
 3. 明确断点发生在流量成本、注册质量、试用激活、付费能力、客单价还是 ROI。
 4. 区分广告侧可控问题和业务侧不可控问题。
 5. 给出证据、阈值、风险、owner、下一步实验和停止规则。

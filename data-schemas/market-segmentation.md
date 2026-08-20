@@ -10,7 +10,7 @@
 | Funnel Stage | awareness, consideration, high intent, remarketing | 防止预算混投 |
 | Company Fit | individual, SMB, mid-market, enterprise | 影响 trial-to-payment 和 AOV |
 | Offer | free trial, demo, template, discount, consult | 影响注册质量 |
-| Device | desktop, mobile, tablet | B2B trial/付费可能设备差异明显 |
+| Device | desktop, mobile, tablet | trial/付费可能设备差异明显 |
 
 ## Rules
 

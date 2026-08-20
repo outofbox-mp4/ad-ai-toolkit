@@ -1,6 +1,6 @@
 # Funnel Metrics
 
-## SaaS / B2B Default Funnel
+## SaaS Funnel
 
 | Metric | Formula | Notes |
 | --- | --- | --- |

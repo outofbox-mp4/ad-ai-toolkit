@@ -7,7 +7,6 @@
 ![ChatGPT Ads](https://img.shields.io/badge/ChatGPT%20Ads-412991?style=flat-square&logo=openai&logoColor=white)
 ![SaaS B2B](https://img.shields.io/badge/Industry-SaaS%20%2F%20B2B-orange?style=flat-square)
 ![Agent Ready](https://img.shields.io/badge/AI-Agent%20Ready-16a34a?style=flat-square)
-![Method Library](https://img.shields.io/badge/Asset-Method%20Library-111827?style=flat-square)
 
 <p align="center">
   <img width="400" height="350" alt="企鹅家族00006-潇洒小滑板" src="https://github.com/user-attachments/assets/a2db1d4a-b4f7-4ff4-88bd-f044550b69ef" />

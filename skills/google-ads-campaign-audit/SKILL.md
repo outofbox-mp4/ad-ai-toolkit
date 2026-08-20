@@ -1,83 +1,87 @@
 ---
 name: google-ads-campaign-audit
-description: Audit Google Ads campaign performance for a specific day or date range, producing read-only campaign tables and diagnosis for registrations, trials, payments, spend, CPC, and volume changes. Use only for Google Ads campaign-level performance review, not for search-term mining or direct account changes.
+description: Audit Google Ads campaign performance for a specific day or date range, producing read-only campaign tables and funnel diagnosis for registrations, trials, payments, revenue, ROI, spend, CPC, and volume changes. Do not use for search-term mining or direct account changes.
 ---
 
 # Google Ads Campaign Audit
 
-Use this skill when the user asks to review Google Ads campaign performance for a specific day or period, such as checking yesterday's campaign conversions, diagnosing registration or trial changes, comparing spend shifts, or turning campaign data into a compact table and action list.
+## 适用场景
 
-This skill is read-only. Do not change budgets, bids, targeting, exclusions, assets, or statuses unless the user separately asks for an implementation action and confirms the exact target.
+用于检查 Google Ads 某天、某周或某周期的 campaign 表现，尤其是注册、试用、付费、ROI、花费和量级变化。若问题需要搜索词明细，转到 `search-term-anomaly-diagnosis`。
 
-## Input
+参考：[methodology/roi-diagnosis.md](../../methodology/roi-diagnosis.md)、[data-schemas/google-ads-fields.md](../../data-schemas/google-ads-fields.md)、[templates/diagnosis-report-template.md](../../templates/diagnosis-report-template.md)。
 
-Ask for or infer the minimum needed context:
+## 输入数据要求
 
-- Google Ads customer account or workspace-defined default account.
-- Date range and comparison baseline. Convert relative dates into concrete dates.
-- Business goal and primary conversion definitions, such as registration, trial, payment, or revenue.
-- Target CPA, cost per trial, ROAS, or other decision threshold if available.
-- Any known tracking, landing-page, offer, budget, or campaign changes during the period.
+- Google Ads customer account 或 workspace 默认账户。
+- 当前周期和基线周期；相对日期必须转成具体日期。
+- 业务目标：ROI、注册 CPA、试用 CPA、付费 CPA、收入或 ROAS。
+- conversion action 定义、归因窗口、收入成熟期、币种。
+- campaign 级数据，以及必要时的 conversion action、device、country、search impression share、landing page、asset 或 ad group 分层。
 
-If the user only says "yesterday", use the previous local calendar date and compare it with the prior 7 days when data is available. For a multi-day range, compare with the immediately preceding period of equal length unless the user names another baseline.
+## 分析顺序
+
+1. 先确认口径和数据成熟度。
+2. 做账户级漏斗：spend、impressions、clicks、registrations、trials、payments、revenue、ROI。
+3. 对比当前周期和基线，定位断点。
+4. 做 campaign 表，找贡献最大变化的 campaign。
+5. 对异常 campaign 继续分层：channel、device、country、conversion action、landing page、search impression share。
+6. 判断是量级、CPC/竞争、流量质量、漏斗/网站、tracking，还是 payment cohort 未成熟。
+7. 输出动作分类和下一步只读检查/实验。
+
+## 必须拆解的指标
+
+CPC、CTR、click-to-registration rate、registration CPA、registration-to-trial rate、trial CPA、trial-to-payment rate、payment CPA、AOV、ROI。
+
+## 必须分层的维度
+
+campaign、channel、date、conversion action、device、country/market、landing page/final URL。Search campaign 异常时补 search impression share、budget lost IS、rank lost IS；PMax 异常时补 asset group、final URL、audience signal 和 geo。
+
+## 判断阈值
+
+- CPC 较基线上升 >= 20%：进入成本压力诊断。
+- 任一核心 CVR 下降 >= 15%：进入漏斗质量诊断。
+- 注册/试用/付费 CPA 超目标或较基线恶化 >= 20%：标异常。
+- ROI 低于目标或较基线下降 >= 20%：标最终目标恶化。
+- latest 3-day trial rate < 6% 且无 payment signal：不要扩量。
+- campaign 有花费但 0 registrations 或 0 trials：建议降预算或暂停，除非用户明确说这是已批准学习测试。
+- 付费少于 3 个或 payment cohort 未成熟：不要下强 ROI 结论。
+
+## 不允许跳过的证据
+
+- 当前周期和基线周期。
+- campaign 级 spend、clicks、registrations、trials、payments/revenue。
+- conversion action 口径。
+- ROI 或 revenue 数据是否成熟。
+- 异常 campaign 对账户总变化的贡献。
+- 建议扩量、收缩或暂停时的 trial/payment/ROI 证据。
+
+## 输出格式
+
+1. 一句话结论。
+2. Account summary 表。
+3. Campaign audit 表：campaign、channel、spend、clicks、registrations、trials、payments/revenue、registration CPA、trial CPA、ROI、judgment。
+4. What changed：按漏斗段说明变化。
+5. Action classification 表。
+6. 需要进一步调用 search-term、landing page、product 或 sales/ops 的检查项。
+
+## 可执行动作分类
+
+| Category | Allowed Output |
+| --- | --- |
+| 广告侧可执行 | 预算/出价/结构/geo/device/query/asset 的建议、只读预检、实验草案；不直接 mutate |
+| 落地页/网站侧建议 | final URL、CTA、表单、加载、页面匹配、tracking 检查 |
+| 产品侧建议 | 试用路径、功能供给、价格/套餐、激活体验 |
+| 销售/运营侧建议 | trial 激活、线索跟进、CRM/upload 延迟 |
+| 需要业务决策 | ROI 目标、保留学习预算、市场取舍、是否补充新供给 |
 
 ## Sensitive Data Handling
 
-Keep credentials and private account data out of the repository and out of examples.
-
-- Never print, store, or commit developer tokens, OAuth client secrets, access tokens, refresh tokens, service-account JSON, ADC files, cookies, device codes, customer PII, audience lists, or raw exported reports.
-- For connected-account work, use the account ID only when required by the authorized tool call. In user-facing or shareable output, prefer an alias such as `account_alpha` unless the user explicitly needs the ID.
-- Treat campaign names, ad group names, final URLs, search terms, countries, and conversion-action names as potentially sensitive. For public examples, replace them with stable aliases or fictional product names.
-- If a local export must be saved during analysis, place it outside the repository or in an ignored private path, and encrypt it with the user's approved local secret manager or vault. Do not commit encrypted exports either; commit only anonymized examples or templates.
-- Round or bucket low-volume metrics in public examples when exact values could reveal customer activity. Keep exact values only in the private analysis response when they are necessary for the user's decision.
-
-Examples in this skill use fictional data only. See [examples/example.md](examples/example.md).
-
-## Required Data
-
-Pull campaign-level Google Ads data for the requested period and baseline where authorized:
-
-- Campaign summary: campaign ID, campaign name, campaign status, advertising channel type, spend, impressions, clicks, CTR, average CPC, conversions, conversion value, all conversions, and all conversion value.
-- Conversion-action split where available: conversion action name, all conversions, conversion value, conversions, and conversions value.
-- Search campaign context when relevant: search impression share, budget-lost impression share, rank-lost impression share, and top impression share.
-- Drilldowns only when needed to explain an anomaly: country, device, network, landing page/final URL, asset, ad group, keyword, search term, listing group, audience, or change history.
-
-Do not blend Google Ads uploaded conversions with CRM or warehouse attribution data into a single rate unless the source, attribution window, and denominator are explicitly aligned.
-
-## Diagnosis Logic
-
-Use this priority order:
-
-1. Payment and mature revenue are final business metrics when available.
-2. Trial is a key mid-funnel diagnostic metric.
-3. Registration shows front-funnel volume and acquisition cost.
-4. Web events such as page views, login, download, or early engagement are supporting signals only.
-
-Distinguish between:
-
-- Volume decline: spend, impressions, clicks, or impression share fell.
-- Cost pressure: CPC, rank-lost impression share, or auction competition rose.
-- Traffic-quality issue: clicks or registrations rose while trials or payments did not.
-- Funnel or tracking issue: multiple campaigns or channels lose the same downstream event at once.
-- Immature cohort: payment or revenue window is too recent to judge.
-
-For PMax or broad automation, do not recommend scaling only because it produced cheap registrations. Check trial, payment, asset/final URL fit, geography, and audience-signal quality before proposing budget shifts.
-
-## Output
-
-Start with the outcome, not the query process. Return:
-
-1. Account-level summary for the requested period and baseline: spend, clicks, registrations, trials, payment or revenue if available, and CPA or cost per trial where meaningful.
-2. Campaign table with campaign alias/name, channel, spend, clicks, registrations, trials, payment or revenue if available, cost per registration, cost per trial, and short judgment.
-3. What changed: spend, click, registration, trial, CPC, impression-share, and whether the issue is volume, cost pressure, traffic quality, funnel/tracking, or immature payment data.
-4. Prioritized recommendations with evidence, risk level, and whether each item is review-only or requires account approval.
-
-Prefer compact Chinese tables when the user writes in Chinese. Use dollar amounts converted from micros. Round percentages to one decimal point and currency to two decimals unless finer precision materially changes the decision.
+不要提交或输出 developer token、OAuth secrets、tokens、service-account JSON、ADC、客户 PII、受众名单或未脱敏报表。公开示例使用别名和虚构数据。需要本地保存私有导出时，放在仓库外或忽略路径，并使用批准的本机加密或组织 Secret Manager。
 
 ## Guardrails
 
-- Do not mutate the account from this skill alone.
-- Do not call a conversion problem "tracking broken" unless multiple independent signals support that diagnosis.
-- Do not attribute performance change to competition if search impression share and CPC are stable.
-- Do not use low-spend tests as performance verdicts; frame them as delivery diagnostics.
-- Do not expose sensitive data in examples, commits, screenshots, logs, or public issue text.
+- 本 skill 只读；不改预算、出价、定向、否定词、素材或状态。
+- 不因注册便宜就建议放量；必须看 trial、payment、AOV 和 ROI。
+- 不把 tracking broken 当默认结论，除非多个独立信号同时支持。
+- 不把所有问题归因于账户结构。

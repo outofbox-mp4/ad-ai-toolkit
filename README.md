@@ -1,57 +1,62 @@
-# Ad AI Toolkit
+# Ad Optimization Method Library
 
-一个面向效果广告团队的开源合集：可执行的 Agent Skills、广告工作模板，以及经过结构化记录的 AI 工具目录。目标是把日常投放分析、素材协作和实验设计沉淀成可审查、可复用的工作流。
+这是一个广告优化师的个人方法论资产库，重点服务于 Google Ads / SaaS / B2B / 跨境投放场景，并可拓展到搜索类平台广告及其它社媒广告。
 
-## 包含什么
+它不是 prompt 堆放处。这里沉淀的是可复用的判断逻辑、诊断 SOP、指标口径、决策阈值、报告模板、实验模板和 Agent skill 编写规范，让 Agent 每次都按同一套优化逻辑分析、产出和行动。
 
-| 分类 | 适用场景 |
+## 资产库原则
+
+简单问题可以直接问 Agent；重复、高风险、需要交付团队看的分析，才值得做成 skill。
+
+默认 ROI 是主目标，注册和试用是过程指标。过程指标会随业务变化：SaaS 常看注册、试用、付费；跨境电商可能看关注、加购、下单、客单价和 ROI。
+
+任何广告问题都必须拆完整漏斗：
+
+```text
+广告花费 -> 展示 -> 点击 -> 注册 -> 试用 -> 付费 -> 付费金额 -> ROI
+```
+
+每次分析必须判断问题发生在哪一段：CPC、点击到注册率、注册 CPA、注册到试用率、试用 CPA、试用到付费率、付费 CPA、客单价、ROI。
+
+## 目录
+
+| 目录 | 用途 |
 | --- | --- |
-| [Skills](./skills) | 让 Agent 按明确边界完成广告分析与规划 |
-| [Tools](./tools) | 按广告工作流收录 AI 工具与集成方案 |
+| [methodology](./methodology) | 共用方法论：ROI 诊断、账户诊断、市场洞察、搜索词分析、实验设计 |
+| [sops](./sops) | 可执行检查清单：ROI 下滑、CPA 异常、试用下降、付费削弱、搜索词浪费 |
+| [skills](./skills) | 可安装的 Agent skills，让 Agent 按固定流程完成高频工作 |
+| [templates](./templates) | 团队交付模板：周报、诊断报告、实验 brief、决策记录 |
+| [data-schemas](./data-schemas) | 数据字段和指标口径，避免不同分析口径混用 |
+| [examples](./examples) | 脱敏案例，展示方法论如何落到真实广告优化工作 |
+| [tools](./tools) | 广告自动化工具和 MCP 接入模板 |
 
-## 已包含的 Skills
+## 当前核心资产
 
-| Skill | 用途 |
+| 资产 | 用途 |
 | --- | --- |
-| [`ad-weekly-review`](./skills/ad-weekly-review) | 把跨平台广告账户数据转成周度洞察与行动项 |
-| [`google-ads-campaign-audit`](./skills/google-ads-campaign-audit) | 只读审计 Google Ads 系列表现，并对敏感数据做脱敏/加密边界处理 |
-| [`ad-structure-audit`](./skills/ad-structure-audit) | 审核账户结构、定向、预算和衡量体系 |
-| [`search-term-anomaly-diagnosis`](./skills/search-term-anomaly-diagnosis) | 从搜索词中诊断花费、CPC、CPA 或转化异常 |
-| [`search-ad-assets`](./skills/search-ad-assets) | 围绕关键词、触发点和 CTA 生成 Search 文本资产 |
-| [`ad-creative-brief`](./skills/ad-creative-brief) | 形成可测试、可制作的广告创意 Brief |
-| [`ad-experiment-design`](./skills/ad-experiment-design) | 设计有判定规则的广告实验 |
+| [roi-diagnosis](./skills/roi-diagnosis) | 诊断 ROI、注册、试用多目标同时压制和付费能力削弱 |
+| [google-ads-campaign-audit](./skills/google-ads-campaign-audit) | 只读审计 Google Ads 系列表现 |
+| [search-term-anomaly-diagnosis](./skills/search-term-anomaly-diagnosis) | 搜索词花费、CPC、CPA 或转化异常排查 |
+| [ad-weekly-review](./skills/ad-weekly-review) | 广告周度复盘 |
+| [ad-structure-audit](./skills/ad-structure-audit) | 账户结构审计 |
+| [ad-experiment-design](./skills/ad-experiment-design) | 广告实验设计 |
+| [search-ad-assets](./skills/search-ad-assets) | Search 标题、描述等文字资产 |
+| [ad-creative-brief](./skills/ad-creative-brief) | 视觉广告创意 brief |
 
-## 已收录的 Tools
+## 使用方式
 
-| Tool | 用途 |
-| --- | --- |
-| [`ad-mcp-tool`](./tools/ad-mcp-tool) | 以凭据隔离、只读优先和人工审批将 Google Ads API 经 MCP 安全接入 Codex / Agent |
+1. 先读 [AGENTS.md](./AGENTS.md)，确认 Agent 的默认判断逻辑。
+2. 分析类任务优先从 [methodology/roi-diagnosis.md](./methodology/roi-diagnosis.md) 和 [data-schemas/funnel-metrics.md](./data-schemas/funnel-metrics.md) 统一口径。
+3. 高频工作用 [skills](./skills) 中的可安装 skill 执行。
+4. 团队交付用 [templates](./templates) 输出，关键结论进入决策记录。
+5. 任何真实账户导出、客户数据、凭据和受众数据都不进入仓库。
 
-每个 Skill 均以 `SKILL.md` 发布，遵循 [Agent Skills](https://agentskills.io) 的目录规范。可将 `skills/<skill-name>` 安装或复制到所用 Agent 支持的 skills 目录。
+## 安全边界
 
-## 快速开始
-
-1. 选择一个 skill 目录，阅读其中的 `SKILL.md`。
-2. 在 Agent 中安装或复制该目录。
-3. 提供业务目标、时间范围、数据定义与脱敏数据。
-4. 先审阅建议；任何预算、出价、定向和投放状态的变更都应由人确认。
-
-## 工具收录原则
-
-工具不以“好用”作为唯一标准。每条收录应说明用途、支持渠道、定价模式、所需数据权限、数据处理位置、最近验证日期、局限性与替代方案。请使用 [工具条目模板](./tools/README.md)。
-
-## 安全与贡献
-
-- 不提交 API 密钥、广告账户访问令牌、客户个人数据、受众名单或未脱敏报表。
-- 不把推测写成因果结论，不在未授权时执行投放变更。
-- 提交前请阅读 [贡献指南](./CONTRIBUTING.md) 与 [安全政策](./SECURITY.md)。
-
-## Roadmap
-
-- Meta / TikTok / LinkedIn 平台专用分析 skills
-- 广告命名、UTM 与转化追踪检查器
-- 工具条目与真实工作流示例
-- 可重复的 skill 评测用例
+- Skills 默认只分析、建议和生成草稿。
+- 预算、出价、定向、否定词、素材发布、投放状态等写操作必须获得明确确认。
+- 示例只能使用虚构或脱敏数据。
+- 私有报表应保存在仓库外或被忽略的本地私有路径；需要长期保存时使用批准的本机加密或组织 Secret Manager。
 
 ## License
 

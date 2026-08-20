@@ -1,56 +1,73 @@
 ---
 name: search-ad-assets
-description: Create search-ad text assets for Google Ads, Microsoft Advertising, and similar text Search platforms. Use when asked to write or refresh responsive search-ad headlines, descriptions, display paths, sitelinks, callouts, or structured snippets. Organize assets around keyword themes, the user's search trigger or intent, product proof, and a relevant call to action. Do not use for visual ad creative, bidding, campaign structure, or search-term mining.
+description: Create search-ad text assets for Google Ads, Microsoft Advertising, and similar text Search platforms. Use when responsive search-ad headlines, descriptions, display paths, sitelinks, callouts, or structured snippets must be mapped to keyword themes, search triggers, proof, and CTA. Do not use for visual creative, bidding, account diagnosis, or search-term mining.
 ---
 
 # Search Ad Assets
 
-## Scope
+## 适用场景
 
-Use for text assets that appear with a Search query. Build assets by keyword theme and search intent, not as one generic list for an entire account.
+用于 Search 广告文字资产：标题、描述、display path、sitelink、callout、structured snippet。核心不是堆标题，而是把 keyword、trigger、proof、CTA 对齐到搜索意图和落地页。
 
-Do not use this skill to choose keywords, add negatives, set bids, or create visual assets. Hand those tasks to keyword, search-term, campaign, or visual-creative skills.
+## 输入数据要求
 
-## Gather inputs
+platform、market/language、landing page、conversion event、offer、approved claims、keyword themes、search triggers、match type context、brand rules、policy constraints、current asset limits、历史表现数据。
 
-Obtain the platform, market and language, landing page, conversion event, offer, approved claims, keyword themes, match-type context, search intent, brand constraints, and any current asset limits. Treat missing product proof or policy guidance as an open question.
+## 分析顺序
 
-## Build the message map
+1. 按 keyword theme 和 search intent 分组。
+2. 为每组建立 message map：keyword、trigger、proof、CTA、brand。
+3. 判断该资产要改善哪个漏斗段：CTR、点击到注册率、注册 CPA、试用 CPA 或 ROI。
+4. 生成标题、描述和 extension，并标注每条资产的角色。
+5. 检查字符数、政策、声明真实性和 landing page 一致性。
+6. 给出测试组合、pinning 建议和下游验证指标。
 
-For each ad group or keyword theme, define:
+## 必须拆解的指标
 
-| Element | Purpose |
+CTR、CPC、click-to-registration rate、registration CPA、registration-to-trial rate、trial CPA、payment signal、ROI。没有历史数据时，说明只能产出待测资产，不能宣称效果。
+
+## 必须分层的维度
+
+keyword theme、search trigger、intent stage、market/language、landing page、offer、device、brand vs non-brand、competitor vs generic。
+
+## 判断阈值
+
+- 资产不能只服务 CTR；若历史点击到注册率或试用率弱，必须加强 intent qualification。
+- 若某 theme trial rate < 6% 且无 payment signal，不建议写强扩量型文案。
+- 若 claim 无页面证据或政策依据，不得写入资产。
+- Pinning 只用于法律、品牌或顺序强约束；否则保留组合多样性。
+
+## 不允许跳过的证据
+
+- keyword theme 和 search trigger。
+- landing page 是否支持 CTA 和 proof。
+- approved claims 来源。
+- 字符限制和政策风险。
+- 每组资产的验证指标。
+
+## 输出格式
+
+每个 keyword theme 输出：
+
+1. Message map。
+2. Headline table：asset、role、trigger、intended combination、pinning rationale。
+3. Description table。
+4. Display paths and extensions。
+5. Compliance checks。
+6. Launch/test checklist。
+
+## 可执行动作分类
+
+| Category | Allowed Output |
 | --- | --- |
-| Keyword theme | Match the user's expressed need without keyword stuffing. |
-| Trigger | Reflect the moment, urgency, pain point, or comparison intent behind the query. |
-| Proof | State only an approved feature, offer, price, or differentiator. |
-| CTA | Match the next action to the search intent and landing page. |
-
-Use the map to create genuinely different headline and description combinations. Do not make superficial word swaps.
-
-## Produce assets
-
-1. Group output by keyword theme or ad group.
-2. Label every headline and description with its primary role: `keyword`, `trigger`, `proof`, `CTA`, or `brand`.
-3. Include display paths and eligible extensions—sitelinks, callouts, or structured snippets—only when the supplied platform and landing page support them.
-4. Validate against the platform's current character limits and editorial policy before upload. Do not assume limits from another platform or locale.
-5. Recommend pinning only where a legal, brand, or message-order requirement makes it necessary; otherwise preserve combination diversity.
-
-## Output format
-
-Return, for each keyword theme:
-
-- Message map
-- Headline table: asset, role, intended combination, optional pinning rationale
-- Description table: asset, role, intended combination
-- Display paths and extensions
-- Compliance checks, unanswered questions, and launch checklist
-
-Read [examples/example.md](examples/example.md) when a concrete output shape is helpful.
+| 广告侧可执行 | RSA 标题/描述、extensions、pinning 建议、测试组合 |
+| 落地页/网站侧建议 | 页面 proof、CTA、section、query-message match |
+| 产品侧建议 | 缺失功能证据、场景页、案例或价格说明 |
+| 销售/运营侧建议 | demo/consult CTA 与后续承接 |
+| 需要业务决策 | 是否使用竞品词、价格/折扣/对比声明 |
 
 ## Guardrails
 
-- Do not invent prices, discounts, results, availability, reviews, or competitor claims.
-- Do not repeat a keyword unnaturally merely to increase density.
-- Keep the CTA consistent with the actual landing-page action.
-- Flag regulated, comparative, and performance claims for legal or brand review.
+- 不编造价格、折扣、结果、评价、客户、竞品声明。
+- 不为提高关键词密度而重复堆词。
+- 不把纯 Search 资产混入视觉创意 brief。

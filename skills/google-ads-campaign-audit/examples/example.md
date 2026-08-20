@@ -13,30 +13,30 @@ Do not modify the account, and keep account IDs and raw campaign names out of th
 
 ## Example Output
 
-结论：FlowNote 这 7 天没有出现 CPA 失控，主要问题是 Search 量级回落，PMax 注册便宜但 trial 质量仍偏弱。当前 trial CPA 为 `$18.42`，低于 `$30` 目标；建议先恢复 Search 有效流量，再限制 PMax 的低意图扩量。
+结论：FlowNote 这 7 天没有出现 trial CPA 失控，但 ROI 从 `2.0` 降到 `1.7`，主要问题是 Search 量级回落、PMax 注册便宜但 trial 和 payment 质量偏弱。当前 trial CPA 为 `$18.42`，低于 `$30` 目标；但不能因此直接扩 PMax，下一步应先恢复 Search 有效流量，并限制低意图扩量。
 
 ### Account Summary
 
-| Period | Spend | Clicks | Register | Trial | Cost / Trial | Main Read |
-| --- | ---: | ---: | ---: | ---: | ---: | --- |
-| 2026-08-12 to 2026-08-18 | $1,842.10 | 4,860 | 312 | 100 | $18.42 | CPA 可控，量级下降 |
-| 2026-08-05 to 2026-08-11 | $2,205.40 | 5,740 | 371 | 124 | $17.79 | 基准量级更高 |
-| Change | -16.5% | -15.3% | -15.9% | -19.4% | +3.5% | 不是花费暴涨，而是有效量减少 |
+| Period | Spend | Clicks | Register | Trial | Payment | Revenue | ROI | Main Read |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 2026-08-12 to 2026-08-18 | $1,842.10 | 4,860 | 312 | 100 | 10 | $3,131.57 | 1.70 | CPA 可控，但 ROI 下滑 |
+| 2026-08-05 to 2026-08-11 | $2,205.40 | 5,740 | 371 | 124 | 14 | $4,410.80 | 2.00 | 基准量级和付费更高 |
+| Change | -16.5% | -15.3% | -15.9% | -19.4% | -28.6% | -29.0% | -15.0% | 有效量和付费能力同步变弱 |
 
 ### Campaign Table
 
-| Campaign | Channel | Spend | Clicks | Register | Trial | Cost / Register | Cost / Trial | Judgment |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| `search_core_tasks` | Search | $860.30 | 1,920 | 154 | 68 | $5.59 | $12.65 | 仍是主力，trial 下降来自点击量减少 |
-| `search_competitor_test` | Search | $314.20 | 680 | 28 | 5 | $11.22 | $62.84 | CPA 高，需要拆看 query 与竞品意图 |
-| `pmax_trial_growth` | PMax | $512.60 | 1,840 | 110 | 22 | $4.66 | $23.30 | 注册便宜，但 trial 转化率偏低 |
-| `display_remarketing` | Display | $155.00 | 420 | 20 | 5 | $7.75 | $31.00 | 小量级，保留观察 |
+| Campaign | Channel | Spend | Register | Trial | Payment | Revenue | Trial CPA | ROI | Judgment |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| `search_core_tasks` | Search | $860.30 | 154 | 68 | 8 | $2,720.00 | $12.65 | 3.16 | 仍是主力，trial 下降来自点击量减少 |
+| `search_competitor_test` | Search | $314.20 | 28 | 5 | 0 | $0.00 | $62.84 | 0.00 | CPA 高，需要拆看 query 与竞品意图 |
+| `pmax_trial_growth` | PMax | $512.60 | 110 | 22 | 1 | $231.57 | $23.30 | 0.45 | 注册便宜，但 trial/payment 质量偏低 |
+| `display_remarketing` | Display | $155.00 | 20 | 5 | 1 | $180.00 | $31.00 | 1.16 | 小量级，保留观察 |
 
 ### What Changed
 
 - Search 核心系列 spend 下降 `18.8%`，click 下降 `17.4%`，trial 下降 `20.9%`；Search impression share 稳定，CPC 未显著上涨，优先排查预算节奏、关键词状态、广告强度和落地页可用性。
 - 竞品测试系列 cost / trial 达 `$62.84`，超过目标 CPA；这更像流量意图问题，而不是全账户 tracking 问题。
-- PMax 注册成本低，但 register to trial rate 只有 `20.0%`，低于 Search 核心系列的 `44.2%`；暂不建议把 Search 预算直接转给 PMax。
+- PMax 注册成本低，但 register to trial rate 只有 `20.0%`，ROI 只有 `0.45`；暂不建议把 Search 预算直接转给 PMax。
 - Payment 数据处于短 cohort，不足以判断 30 天收入质量。
 
 ### Recommended Actions

@@ -1,12 +1,10 @@
 # Ad Optimization Method Library
 
-![Google Ads](https://img.shields.io/badge/Platform-Google%20Ads-4285F4?style=flat-square&logo=googleads&logoColor=white)
+![Google Ads](https://img.shields.io/badge/Google%20Ads-4285F4?style=flat-square&logo=googleads&logoColor=white)
 ![Facebook Ads](https://img.shields.io/badge/Facebook%20Ads-0666E5?style=flat-square&logo=meta&logoColor=white)
 ![TikTok Ads](https://img.shields.io/badge/TikTok%20Ads-000000?style=flat-square&logo=tiktok&logoColor=white)
 ![Reddit Ads](https://img.shields.io/badge/Reddit%20Ads-FF4500?style=flat-square&logo=reddit&logoColor=white)
 ![ChatGPT Ads](https://img.shields.io/badge/ChatGPT%20Ads-412991?style=flat-square&logo=openai&logoColor=white)
-![SaaS B2B](https://img.shields.io/badge/Industry-SaaS-orange?style=flat-square)
-![Agent Ready](https://img.shields.io/badge/AI-Agent%20Ready-16a34a?style=flat-square)
 
 <p align="center">
   <img width="400" height="350" alt="企鹅家族00006-潇洒小滑板" src="https://github.com/user-attachments/assets/a2db1d4a-b4f7-4ff4-88bd-f044550b69ef" />

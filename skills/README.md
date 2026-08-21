@@ -1,6 +1,6 @@
 # 广告 Skills 目录
 
-这里收录可由 Agent 安装调用的广告优化工作流。每个 skill 保持 `skills/<skill-name>/SKILL.md` 结构；共用方法论、SOP、模板和数据口径放在仓库其它目录，避免每个 skill 各写一套判断逻辑。
+这里收录可由 Agent 安装调用的广告优化工作流，省去每次通过大段prompt交代背景、提示问题并规定要求的过程。每个 skill 保持 `skills/<skill-name>/SKILL.md` 结构；共用方法论、SOP、模板和数据口径放在仓库其它目录，避免每个 skill 各写一套判断逻辑。
 
 ## Skill 编写要求
 

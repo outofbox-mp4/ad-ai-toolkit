@@ -59,7 +59,7 @@ Agent可以调广告，广告操作逐步AI化，那么，优化师的出路在�
 
 | Directory | What It Captures |
 | --- | --- |
-| [methodology](./methodology) | 通用方法论：ROI 诊断、账户诊断、市场洞察、搜索词分析、实验设计 |
+| [methodology](./methodology) | 通用方法论：ROI 诊断、账户诊断、市场洞察、搜索词分析 |
 | [sops](./sops) | 常见投放问题检查清单：ROI 下滑、CPA 异常、转化下降、付费减少、否定词列表 |
 | [skills](./skills) | 可安装的 Agent skills，让 Agent 按固定流程完成重复性优化工作 |
 | [templates](./templates) | 报告交付模板：周报、诊断报告、实验 brief、决策记录 |

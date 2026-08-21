@@ -4,7 +4,7 @@
 
 | Metric | Formula | Notes |
 | --- | --- | --- |
-| Spend | ad cost | 从平台 micros 或原始币种转换 |
+| Spend | ad cost | 遵循平台币种设置 |
 | Impressions | impressions | 展示量 |
 | Clicks | clicks | 点击量 |
 | CTR | clicks / impressions | 判断素材、文案和流量匹配 |

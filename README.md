@@ -93,15 +93,6 @@ Agent可以调广告，广告操作逐步AI化，那么，优化师的出路在�
 4. 区分广告侧可控问题和业务侧不可控问题。
 5. 给出证据、阈值、风险、owner、下一步实验和停止规则。
 
-## Roadmap
-
-- Google Ads ROI pressure playbook：多目标压制、tROAS/tCPA 收缩、学习样本不足的诊断框架
-- PMax asset and final URL audit：PMax 素材、页面、受众信号和低意图流量排查
-- B2B SaaS landing-page diagnosis：从点击到注册、注册到试用的页面诊断 SOP
-- Cross-border ecommerce funnel schema：关注、加购、下单、客单价和 ROI 的电商口径
-- Meta / TikTok / LinkedIn diagnostics：社媒广告的素材疲劳、受众质量和 funnel 判断
-- Agent skill evaluation cases：用脱敏案例测试 skill 是否稳定遵循方法论
-
 ## Contribution
 
 欢迎用 Issue 交流广告投放里的真实难题、奇怪波动和踩坑案例。这个仓库的目标不是收集漂亮话，而是把经验沉淀成 Agent 能执行的判断代码。
